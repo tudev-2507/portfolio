@@ -1,650 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio of Vũ Đình Tư (Dev), Vietnamese Full-stack and AI Developer specializing in Node.js, Python, Vue.js, PHP, Laravel and C#."
-    />
-    <title>Vũ Đình Tư (Dev) - Full-stack & AI Developer</title>
-    <link rel="icon" type="image/png" href="./assets/images/dev-logo.png" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <script type="module" src="./javascript/index.js"></script>
-    <script async src="https://cdn.splitbee.io/sb.js"></script>
-  </head>
-
-  <body>
-    <div id="loader" class="zoomIn">
-      <div class="spinner-box">
-        <div class="blue-orbit leo"></div>
-
-        <div class="green-orbit leo"></div>
-
-        <div class="red-orbit leo"></div>
-
-        <div class="white-orbit w1 leo"></div>
-        <div class="white-orbit w2 leo"></div>
-        <div class="white-orbit w3 leo"></div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f5ef">
+  <meta name="description" content="Vũ Đình Tư (Dev) — video editor with 3 years of experience in YouTube Shorts, long-form content and channel production. Also a full-stack & AI developer.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dev · Video Editor & Creative Developer">
+  <meta property="og:description" content="Video editing, storytelling and creative technology. Experience with Korean clients and US-audience YouTube channels.">
+  <meta property="og:image" content="./assets/images/profile.jpg">
+  <title>Dev | Video Editor & Creative Developer</title>
+  <link rel="icon" type="image/png" href="./assets/images/dev-logo.png">
+  <link rel="preload" as="image" href="./assets/images/profile.jpg">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script type="module" src="./javascript/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="shell nav-inner">
+      <a class="wordmark" href="#home" aria-label="Dev home"><span class="brand-symbol">D<span>·</span></span><span>DEV<span class="wordmark-dot">.</span></span></a>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
+        <a href="#editing" data-i18n="navEditing">Video Editing</a>
+        <a href="#works" data-i18n="navWorks">Selected Work</a>
+        <a href="#feedback" data-i18n="navFeedback">Feedback</a>
+        <a href="#development" data-i18n="navDevelopment">Development</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" id="lang-ja" data-lang="ja" aria-pressed="false">JP</button>
+        </div>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span></button>
       </div>
     </div>
-
-    <div id="container">
-      <!-- <div class="cursor">
-        <div class="cursor__border"></div>
-      </div> -->
-
-      <nav class="nav">
-        <div class="wrapper">
-          <section class="nav__mobile">
-            <a href="#hero"><img class="nav__img" src="./assets/images/dev-logo.png" alt="Dev logo" /></a>
-            <aside class="nav__hamburger">
-              <i class="nav__hamburger-icon fa-solid fa-bars"></i>
-              <i class="nav__hamburger-close fa-solid fa-xmark"></i>
-            </aside>
-          </section>
-
-          <section class="nav__desktop">
-            <aside>
-              <a href="#hero"
-                ><img class="nav__img link hidden fromTop" src="./assets/images/dev-logo.png" alt="Dev logo"
-              /></a>
-            </aside>
-            <section class="nav__desktop-links">
-              <a class="desktop-hero active-link link hidden fromTop" href="#hero"
-                ><i class="fa-solid fa-house"></i> Home</a
-              >
-              <a class="desktop-projects link hidden fromTop" href="#projects"
-                ><i class="fa-solid fa-diagram-project"></i> Projects</a
-              >
-              <a class="desktop-skills link hidden fromTop" href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
-            </section>
-            <article class="nav__desktop-socials">
-              <a
-                class="link hidden fromTop"
-                href="https://www.linkedin.com/in/%C4%91%C3%ACnh-t%C6%B0-v%C5%A9-561930369/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                class="link hidden fromTop"
-                href="https://www.facebook.com/devtuw"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                title="Facebook"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a
-                class="link hidden fromTop"
-                href="https://github.com/tudev-2507"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Github"
-                title="Github"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </article>
-            <a class="link hidden fromTop" href="#contact" aria-label="Contact Dev" title="Contact Dev"
-              ><button class="button button--secondary link hidden fromTop">Contact</button></a
-            >
-          </section>
+  </header>
+  <main id="main">
+    <section class="hero shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span><span data-i18n="heroEyebrow">VIDEO EDITOR · CREATIVE TECHNOLOGIST</span></div>
+        <h1><span data-i18n="heroTitle1">Every story</span><br><span class="title-highlight" data-i18n="heroTitle2">deserves impact.</span></h1>
+        <p class="hero-intro" data-i18n="heroIntro">I'm Vũ Đình Tư (Dev), a video editor with 3 years of hands-on experience. I turn stories into engaging videos through thoughtful pacing, visual storytelling, sound and carefully crafted details.</p>
+        <p class="hero-sub" data-i18n="heroStory">My journey began with a passion for art and photography. I taught myself editing, worked on short-form videos for a Korean company, and went on to produce and operate YouTube channels for US audiences.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#works"><span data-i18n="btnSeeVideos">Explore my editing work</span><span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline" href="#contact"><span data-i18n="btnContact">Let's work together</span><span aria-hidden="true">→</span></a>
         </div>
-      </nav>
-
-      <aside class="sidebar-mobile">
-        <ul class="sidebar-mobile__list">
-          <li>
-            <a class="sidebar-mobile__item mobile-hero active-link" href="#hero"
-              ><i class="fa-solid fa-house"></i> Home</a
-            >
-          </li>
-          <li>
-            <a class="sidebar-mobile__item mobile-projects" href="#projects"
-              ><i class="fa-solid fa-diagram-project"></i> Projects</a
-            >
-          </li>
-          <li>
-            <a class="sidebar-mobile__item mobile-skills" href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
-          </li>
-          <li>
-            <a class="sidebar-mobile__item" href="https://www.linkedin.com/in/%C4%91%C3%ACnh-t%C6%B0-v%C5%A9-561930369/" target="_blank" rel="noopener noreferrer"
-              ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
-            >
-          </li>
-          <li>
-            <a class="sidebar-mobile__item" href="https://www.facebook.com/devtuw" target="_blank" rel="noopener noreferrer"
-              ><i class="fa-brands fa-facebook"></i> Facebook</a
-            >
-          </li>
-          <li>
-            <a class="sidebar-mobile__item" href="https://github.com/tudev-2507" target="_blank" rel="noopener noreferrer"
-              ><i class="fa-brands fa-github"></i> Github</a
-            >
-          </li>
-          <li>
-            <a class="sidebar-mobile__item mobile-contact" href="#contact"
-              ><i class="fa-solid fa-address-card"></i> Contact</a
-            >
-          </li>
-          <li>
-            <a class="sidebar-mobile__item mobile-contact" href="#contact"
-              ><i class="fa-solid fa-address-card"></i> Contact Dev</a
-            >
-          </li>
-        </ul>
-      </aside>
-
-      <main>
-        <section class="landing">
-          <img src="./assets/images/background.png" class="background" alt="" />
-          <img src="./assets/images/foreground.png" class="foreground" alt="" />
-
-          <div class="hero-container" id="hero">
-            <div class="wrapper">
-              <section class="hero">
-                <section class="hero__left">
-                  <section class="hero__heading-background prevent-select link hidden fromTop">
-                    <h1 class="hero__heading">Hi, I'm Dev!</h1>
-                  </section>
-                  <div id="typed-strings">
-                    <p>A <span class="hero__fullstack">Full-stack</span> Developer</p>
-                    <p>An <span class="hero__frontend">AI & RAG</span> Engineer</p>
-                    <p>A <span class="hero__backend">Backend</span> Developer</p>
-                    <p>Your <span class="hero__next">Next</span> Teammate</p>
-                  </div>
-                  <div class="typed-container prevent-select link hidden fromTop">
-                    <span id="typed"></span>
-                  </div>
-                  <p class="hero__paragraph link hidden fromTop">
-                    I'm Vũ Đình Tư (Dev), born 25/07/2006, a Vietnamese developer with 1 year and 6 months of
-                    professional experience at Lotus AI INC. I build scalable web systems, AI solutions and
-                    production-ready data pipelines, and I communicate confidently in English. Nationality:
-                    Vietnamese.
-                  </p>
-                  <a href="#contact" class="hero__contact-btn">
-                    <button class="button hero__button link hidden fromTop">
-                      Let's Connect <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </a>
-                </section>
-                <article class="hero__right">
-                  <img class="hero__astronaut" src="./assets/images/astronaut.svg" alt="" />
-                </article>
-              </section>
-            </div>
-          </div>
-        </section>
-
-        <div class="container-projects">
-          <div class="wrapper">
-            <section class="projects" id="projects">
-              <h2 class="projects__heading">Projects</h2>
-              <article class="projects__project hidden fromRight">
-                <article class="projects__laptop-mockup">
-                  <video disableRemotePlayback muted autoplay playsinline>
-                    <source
-                      src="./assets/videos/chatify.webm"
-                      type='video/webm;codecs="vp9"'
-                      onerror="fallback(parentNode);
-                  function fallback(video) {;
-                    while (video.hasChildNodes()) {
-                      if (video.firstChild instanceof HTMLSourceElement) video.removeChild(video.firstChild);
-                      else video.parentNode.insertBefore(video.firstChild, video);
-                    }
-                    video.parentNode.removeChild(video);
-                  }"
-                    />
-                    <img src="./assets/videos/chatify-ios.png" alt="19789 game project preview" loading="lazy" />
-                  </video>
-                </article>
-                <section class="projects__info">
-                  <h3 class="projects__title">19789 (BET)</h3>
-                  <p class="projects__paragraph">
-                    Worked as a game developer on the 19789 (BET) project, contributing to backend services, gameplay
-                    features and reliable real-time system integration.
-                  </p>
-                  <section class="all-skills__icons all-skills__icons--small">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon ts">
-                        <img src="./assets/images/icons/typescript.svg" alt="typescript" loading="lazy" />
-                      </article>
-                      <p>Typescript</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon react">
-                        <img src="./assets/images/icons/react.svg" alt="react" loading="lazy" />
-                      </article>
-                      <p>React</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon mysql">
-                        <img src="./assets/images/icons/mysql.svg" alt="mysql" loading="lazy" />
-                      </article>
-                      <p>MySQL</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon node">
-                        <img src="./assets/images/icons/node-js.svg" alt="node-js" loading="lazy" />
-                      </article>
-                      <p>NodeJS</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon express">
-                        <img src="./assets/images/icons/express.svg" alt="express" loading="lazy" />
-                      </article>
-                      <p>ExpressJS</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon socket">
-                        <img src="./assets/images/icons/socket.svg" alt="socket" loading="lazy" />
-                      </article>
-                      <p>Socket.IO</p>
-                    </section>
-                  </section>
-                  <details class="projects__demo-acc">
-                    <summary>
-                      <span>👇</span>
-                      Role
-                    </summary>
-                    <p>Game Developer</p>
-                  </details>
-                  <section class="projects__buttons">
-                    <a href="https://github.com/tudev-2507" target="_blank" rel="noopener noreferrer">
-                      <button class="button">GitHub</button>
-                    </a>
-                  </section>
-                </section>
-              </article>
-              <article class="projects__project projects__project--reverse hidden fromLeft">
-                <article class="projects__laptop-mockup projects__laptop-mockup--dashboard">
-                  <img
-                    class="projects__dashboard-image"
-                    src="./assets/images/dms-dashboard.png"
-                    alt="DMS contract data management dashboard"
-                    loading="lazy"
-                  />
-                </article>
-                <section class="projects__info tweeter">
-                  <h3 class="projects__title">DMS Platforms</h3>
-                  <p class="projects__paragraph">
-                    Built web-based document and data management systems (DMS) with structured workflows, role-based
-                    access, reliable APIs and responsive interfaces for day-to-day operations.
-                  </p>
-                  <section class="all-skills__icons all-skills__icons--small">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon ts">
-                        <img src="./assets/images/icons/typescript.svg" alt="typescript" loading="lazy" />
-                      </article>
-                      <p>Typescript</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon react">
-                        <img src="./assets/images/icons/react.svg" alt="react" loading="lazy" />
-                      </article>
-                      <p>React</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon mysql">
-                        <img src="./assets/images/icons/mysql.svg" alt="mysql" loading="lazy" />
-                      </article>
-                      <p>MySQL</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon node">
-                        <img src="./assets/images/icons/node-js.svg" alt="node-js" loading="lazy" />
-                      </article>
-                      <p>NodeJS</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon express">
-                        <img src="./assets/images/icons/express.svg" alt="express" loading="lazy" />
-                      </article>
-                      <p>ExpressJS</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon socket">
-                        <img src="./assets/images/icons/tailwind.svg" alt="tailwind" loading="lazy" />
-                      </article>
-                      <p>Tailwind</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon socket">
-                        <img src="./assets/images/icons/prisma.svg" alt="prisma" loading="lazy" />
-                      </article>
-                      <p>Prisma</p>
-                    </section>
-                  </section>
-                  <details class="projects__demo-acc">
-                    <summary>
-                      <span>👇</span>
-                      Focus
-                    </summary>
-                    <p>Business systems and workflow automation</p>
-                  </details>
-                  <section class="projects__buttons">
-                    <a href="https://github.com/tudev-2507" target="_blank" rel="noopener noreferrer">
-                      <button class="button">GitHub</button>
-                    </a>
-                  </section>
-                </section>
-              </article>
-
-              <article class="projects__project projects__project--enginers hidden fromRight">
-                <article class="projects__laptop-mockup projects__laptop-mockup--dashboard">
-                  <img
-                    class="projects__dashboard-image"
-                    src="./assets/images/ev-charging-dashboard.png"
-                    alt="Electric vehicle charging station monitoring and alert dashboard"
-                    loading="lazy"
-                  />
-                </article>
-                <section class="projects__info projects__info--engineers">
-                  <h3 class="projects__title">EV Charging Alerts</h3>
-                  <p class="projects__paragraph">
-                    Developed monitoring and alerting features for electric vehicle charging stations, helping
-                    operators track station status, surface incidents and respond to operational issues quickly.
-                  </p>
-                  <section class="all-skills__icons all-skills__icons--small">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon drive">
-                        <img src="./assets/images/icons/google-drive.svg" alt="drive" loading="lazy" />
-                      </article>
-                      <p>Drive</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon express">
-                        <img src="./assets/images/icons/express.svg" alt="express" loading="lazy" />
-                      </article>
-                      <p>ExpressJS</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon react">
-                        <img src="./assets/images/icons/react.svg" alt="react" loading="lazy" />
-                      </article>
-                      <p>React</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon node">
-                        <img src="./assets/images/icons/node-js.svg" alt="node-js" loading="lazy" />
-                      </article>
-                      <p>NodeJS</p>
-                    </section>
-                  </section>
-                  <a href="https://github.com/tudev-2507" target="_blank" rel="noopener noreferrer">
-                    <button class="button">GitHub</button>
-                  </a>
-                </section>
-              </article>
-
-              <article class="projects__project project__your-project projects__your-project hidden fromLeft">
-                <article class="projects__laptop-mockup projects__phone-mockup">
-                  <img
-                    class="projects__dashboard-image projects__phone-screen"
-                    src="./assets/images/alera-ai-dashboard.png"
-                    alt="Alera AI mobile application on iPhone"
-                    loading="lazy"
-                  />
-                </article>
-
-                <section class="projects__info projects__info--project">
-                  <h3 class="projects__title">ALERA AI</h3>
-                  <p class="projects__paragraph">
-                    An AI project built around practical intelligent workflows. My AI work includes RAG,
-                    Vector Embedding, Text Chunking and Vector Databases such as Pinecone, Milvus and Chroma.
-                  </p>
-                  <a href="https://alera-ai.com/" target="_blank" rel="noopener noreferrer"
-                    ><button class="button">Visit Alera AI</button></a
-                  >
-                </section>
-              </article>
-              <!-- <button class="button button--secondary projects__view-all">View All Projects</button> -->
-            </section>
-          </div>
+        <div class="hero-stats" aria-label="Professional overview">
+          <div><strong>03<span class="stat-plus">+</span></strong><small data-i18n="statYears">Years editing</small></div>
+          <div><strong>KR · US</strong><small data-i18n="statMarkets">Production experience</small></div>
+          <div><strong>Short / Long</strong><small data-i18n="statFormats">Video formats</small></div>
         </div>
-
-        <div class="container-skills">
-          <div class="wrapper">
-            <section class="skills" id="skills">
-              <h2 class="skills__heading">Skills</h2>
-
-              <section class="all-skills">
-                <article class="all-skills__skill all-skills__skill--frontend hidden fromRight">
-                  <header class="all-skills__header">
-                    <h3>Frontend</h3>
-                    <p class="all-skills__summary">Responsive interfaces and maintainable web applications.</p>
-                  </header>
-                  <section class="all-skills__icons">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon html5">
-                        <img src="./assets/images/icons/html.svg" alt="html" loading="lazy" />
-                      </article>
-                      <p>HTML5</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon css">
-                        <img src="./assets/images/icons/css3.svg" alt="css" loading="lazy" />
-                      </article>
-                      <p>CSS3</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon js">
-                        <img src="./assets/images/icons/javascript.svg" alt="javascript" loading="lazy" />
-                      </article>
-                      <p>Javascript</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon react">
-                        <img src="./assets/images/icons/react.svg" alt="react" loading="lazy" />
-                      </article>
-                      <p>Vue.js</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon react-query">
-                        <img src="./assets/images/icons/react-query.svg" alt="react-query" loading="lazy" />
-                      </article>
-                      <p>JavaScript</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon tailwind">
-                        <img src="./assets/images/icons/tailwind.svg" alt="tailwind" loading="lazy" />
-                      </article>
-                      <p>Responsive UI</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon sass">
-                        <img src="./assets/images/icons/sass.svg" alt="sass" loading="lazy" />
-                      </article>
-                      <p>API Integration</p>
-                    </section>
-                    <section class="all-skills__container" title="Styled Components">
-                      <article class="all-skills__icon styled-components">
-                        <img src="./assets/images/icons/styled-components.png" alt="styled-components" loading="lazy" />
-                      </article>
-                      <p>Web Apps</p>
-                    </section>
-                  </section>
-                </article>
-                <article class="all-skills__skill all-skills__skill--backend hidden fromRight">
-                  <header>
-                    <h3>Backend</h3>
-                    <p class="all-skills__summary">Backend services, APIs and production system development.</p>
-                  </header>
-                  <section class="all-skills__icons">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon node">
-                        <img src="./assets/images/icons/node-js.svg" alt="node" loading="lazy" />
-                      </article>
-                      <p>NodeJS</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon express">
-                        <img src="./assets/images/icons/express.svg" alt="express" loading="lazy" />
-                      </article>
-                      <p>Python</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon mysql">
-                        <img src="./assets/images/icons/mysql.svg" alt="mysql" loading="lazy" />
-                      </article>
-                      <p>PHP</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon mongodb">
-                        <img src="./assets/images/icons/mongodb.svg" alt="mongodb" loading="lazy" />
-                      </article>
-                      <p>Laravel</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon graphql">
-                        <img src="./assets/images/icons/graphql.svg" alt="graphql" loading="lazy" />
-                      </article>
-                      <p>C#</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon api">
-                        <img src="./assets/images/icons/api.svg" alt="api" loading="lazy" />
-                      </article>
-                      <p>REST API</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon prisma">
-                        <img src="./assets/images/icons/prisma.svg" alt="prisma" loading="lazy" />
-                      </article>
-                      <p>Database Design</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon auth">
-                        <img src="./assets/images/icons/auth.svg" alt="auth" loading="lazy" />
-                      </article>
-                      <p>Auth</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon socket">
-                        <img src="./assets/images/icons/socket.svg" alt="socket" loading="lazy" />
-                      </article>
-                      <p>Socket.IO</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon firebase">
-                        <img src="./assets/images/icons/firebase.svg" alt="firebase" loading="lazy" />
-                      </article>
-                      <p>System Integration</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon python">
-                        <img src="./assets/images/icons/python.svg" alt="python" loading="lazy" />
-                      </article>
-                      <p>Data Pipelines</p>
-                    </section>
-                  </section>
-                </article>
-                <article class="all-skills__skill all-skills__skill--other hidden fromRight">
-                  <header>
-                    <h3>AI & RAG</h3>
-                    <p class="all-skills__summary">
-                      Designing retrieval pipelines and preparing reliable knowledge sources for AI applications.
-                    </p>
-                  </header>
-                  <section class="all-skills__icons">
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon ts">
-                        <img src="./assets/images/icons/typescript.svg" alt="typescript" loading="lazy" />
-                      </article>
-                      <p>RAG</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon git">
-                        <img src="./assets/images/icons/git.svg" alt="git" loading="lazy" />
-                      </article>
-                      <p>Vector Embedding</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon github">
-                        <img src="./assets/images/icons/github.svg" alt="github" loading="lazy" />
-                      </article>
-                      <p>Text Chunking</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon vite">
-                        <img src="./assets/images/icons/vite.svg" alt="vite" loading="lazy" />
-                      </article>
-                      <p>Vector Database</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon jest">
-                        <img src="./assets/images/icons/jest.svg" alt="jest" loading="lazy" />
-                      </article>
-                      <p>Pinecone</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon postman">
-                        <img src="./assets/images/icons/postman.svg" alt="postman" loading="lazy" />
-                      </article>
-                      <p>Milvus</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon aws">
-                        <img src="./assets/images/icons/aws.svg" alt="aws" loading="lazy" />
-                      </article>
-                      <p>Chroma</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon heroku">
-                        <img src="./assets/images/icons/heroku.svg" alt="heroku" loading="lazy" />
-                      </article>
-                      <p>Data Collection</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon netlify">
-                        <img src="./assets/images/icons/netlify.svg" alt="netlify" loading="lazy" />
-                      </article>
-                      <p>Web Scraping</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon photoshop">
-                        <img src="./assets/images/icons/adobe-photoshop.svg" alt="photoshop" loading="lazy" />
-                      </article>
-                      <p>Data Cleaning</p>
-                    </section>
-                    <section class="all-skills__container">
-                      <article class="all-skills__icon shopify">
-                        <img src="./assets/images/icons/shopify.svg" alt="shopify" loading="lazy" />
-                      </article>
-                      <p>English Communication</p>
-                    </section>
-                  </section>
-                </article>
-              </section>
-            </section>
-          </div>
+      </div>
+      <div class="hero-art">
+        <div class="photo-frame"><img src="./assets/images/profile.jpg" width="864" height="1195" alt="Portrait of Dev, video editor and developer" fetchpriority="high"></div>
+        <div class="photo-badge"><span class="badge-icon">✳</span><span><strong data-i18n="photoBadgeTop">Available for projects</strong><small data-i18n="photoBadgeBottom">Remote · International</small></span></div>
+        <span class="photo-index" aria-hidden="true">01 / DEV</span>
+      </div>
+    </section>
+    <div class="marquee-divider"><div class="shell marquee-inner" aria-label="Video editing specialties"><span>PREMIERE PRO</span><i></i><span>CAPCUT</span><i></i><span data-i18n="marqueeStory">STORYTELLING</span><i></i><span>YOUTUBE SHORTS</span><i></i><span data-i18n="marqueeAI">AI-ASSISTED WORKFLOW</span></div></div>
+    <section class="section section-dark" id="editing">
+      <div class="shell">
+        <div class="section-head"><div><div class="section-kicker"><span>01</span><span data-i18n="editingKicker">WHAT I DO</span></div><h2 data-i18n="editingTitle">Video editing<br>is my craft.</h2></div><p class="section-description" data-i18n="editingDescription">Beyond cuts and transitions, I care about how a video feels — its rhythm, clarity, emotion and the reason someone keeps watching.</p></div>
+        <div class="capability-grid">
+          <article class="capability-card"><span class="capability-number">01 /</span><div class="capability-symbol">▣</div><h3 data-i18n="skill1Title">Short-form editing</h3><p data-i18n="skill1Text">YouTube Shorts, TikTok and Reels. Strong opening hooks, concise storytelling and clear on-screen text.</p></article>
+          <article class="capability-card"><span class="capability-number">02 /</span><div class="capability-symbol">▤</div><h3 data-i18n="skill2Title">Long-form storytelling</h3><p data-i18n="skill2Text">Structured narrative edits for videos around 20–40 minutes, with attention to flow and viewer engagement.</p></article>
+          <article class="capability-card"><span class="capability-number">03 /</span><div class="capability-symbol">◈</div><h3 data-i18n="skill3Title">Captions & motion</h3><p data-i18n="skill3Text">Readable subtitles, kinetic text, smooth motion and purposeful effects that support the story.</p></article>
+          <article class="capability-card"><span class="capability-number">04 /</span><div class="capability-symbol">◉</div><h3 data-i18n="skill4Title">Sound & visual polish</h3><p data-i18n="skill4Text">Thoughtful BGM and SFX placement, color adjustments, visual consistency and careful asset selection.</p></article>
+          <article class="capability-card"><span class="capability-number">05 /</span><div class="capability-symbol">◇</div><h3 data-i18n="skill5Title">AI-assisted production</h3><p data-i18n="skill5Text">Practical AI tools for efficient research, creative workflows and media production, with human review.</p></article>
+          <article class="capability-card"><span class="capability-number">06 /</span><div class="capability-symbol">↗</div><h3 data-i18n="skill6Title">Channel-minded editing</h3><p data-i18n="skill6Text">Firsthand YouTube channel experience helps me consider audience expectations, clarity and retention from the edit.</p></article>
         </div>
-
-        <div class="container-contact">
-          <div class="wrapper">
-            <section class="contact hidden" id="contact">
-              <h2 class="contact__heading">Contact</h2>
-              <form class="contact__form" id="sendForm">
-                <input type="text" name="name" id="name" placeholder="Name" />
-                <input type="email" name="email" id="email" placeholder="Email" required />
-                <textarea id="message" name="message" cols="10" rows="10" placeholder="Message" required></textarea>
-                <input type="submit" id="sendButton" class="button button--contact" value="Send" />
-                <aside id="form__info" class="hide">
-                  <p id="form__popup-txt">Email successfully sent!</p>
-                </aside>
-              </form>
-            </section>
-          </div>
+        <div class="tool-row"><span data-i18n="toolsTitle">MY TOOLKIT</span><div><span>Adobe Premiere Pro</span><span>CapCut</span><span>AI Tools</span><span data-i18n="toolAsset">Asset Research</span><span data-i18n="toolAudio">Audio Editing</span></div></div>
+      </div>
+    </section>
+    <section class="section section-journey shell" id="journey">
+      <div class="section-kicker"><span>02</span><span data-i18n="journeyKicker">THE JOURNEY</span></div>
+      <div class="journey-layout"><div><h2 data-i18n="journeyTitle">Curiosity led me here.</h2><p class="journey-lede" data-i18n="journeyLead">Art and photography taught me to notice the details. Editing gave me a way to turn them into stories.</p></div><div class="timeline"><article><span class="timeline-index">01</span><div><h3 data-i18n="journey1Title">Self-taught creative foundation</h3><p data-i18n="journey1Text">Started learning video editing independently, motivated by art, photography and storytelling.</p></div></article><article><span class="timeline-index">02</span><div><h3 data-i18n="journey2Title">Short-form editing for a Korean company</h3><p data-i18n="journey2Text">Worked with a Korean client on short videos, focusing on pacing, text, sound and consistent delivery.</p></div></article><article><span class="timeline-index">03</span><div><h3 data-i18n="journey3Title">YouTube production for the US market</h3><p data-i18n="journey3Text">Expanded into operating YouTube channels and producing both short and longer narrative-driven content for American viewers.</p></div></article></div></div>
+    </section>
+    <section class="section section-work" id="works">
+      <div class="shell">
+        <div class="section-head"><div><div class="section-kicker"><span>03</span><span data-i18n="workKicker">SELECTED WORK</span></div><h2 data-i18n="workTitle">The work<br>speaks for itself.</h2></div><p class="section-description" data-i18n="workDesc">Selected public YouTube channels I have worked on. Follow the links to view published content and editing styles.</p></div>
+        <div class="work-grid">
+          <a class="work-card" href="https://www.youtube.com/channel/UC1vISciach3nfl3WLoo5AvA" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube Channel 01 in a new tab"><div class="work-art work-art-one"><span class="work-art-orbit one"></span><span class="work-art-orbit two"></span><span class="work-art-word">EDIT<span> / 01</span></span><span class="play-symbol" aria-hidden="true">▶</span></div><div class="work-card-bottom"><div><span class="work-category">YOUTUBE / CHANNEL 01</span><h3 data-i18n="work1Title">Channel production & editing</h3><p data-i18n="work1Desc">Published channel portfolio — storytelling, visual selection, pacing and editing.</p></div><span class="work-arrow" aria-hidden="true">↗</span></div></a>
+          <a class="work-card" href="https://www.youtube.com/@specialops6" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube Channel 02 in a new tab"><div class="work-art work-art-two"><span class="work-grid-overlay"></span><span class="work-art-word">STORY<span> / 02</span></span><span class="play-symbol" aria-hidden="true">▶</span></div><div class="work-card-bottom"><div><span class="work-category">YOUTUBE / CHANNEL 02</span><h3 data-i18n="work2Title">Narration-led video editing</h3><p data-i18n="work2Desc">Story-led YouTube content with selected imagery, subtitles, timing and sound.</p></div><span class="work-arrow" aria-hidden="true">↗</span></div></a>
         </div>
-      </main>
-
-      <script src="https://kit.fontawesome.com/8bb946769b.js" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    </div>
-  </body>
+        <p class="work-footnote" data-i18n="workNote">For additional examples or a style-specific editing test, please get in touch.</p>
+      </div>
+    </section>
+    <section class="section section-feedback shell" id="feedback">
+      <div class="section-kicker"><span>04</span><span data-i18n="feedbackKicker">CLIENT FEEDBACK</span></div>
+      <div class="feedback-layout"><div><h2 data-i18n="feedbackTitle">Good work.<br>Built on trust.</h2><p data-i18n="feedbackDesc">Collaborating with international clients taught me to value clear communication, responsibility and a consistent standard of quality.</p></div><figure class="quote-card"><div class="quote-mark" aria-hidden="true">“</div><blockquote data-i18n="feedbackQuote">Thank you for all your effort and hard work! I really hope we get to work together again under a better opportunity.</blockquote><figcaption><span class="quote-avatar" aria-hidden="true">✳</span><span><strong data-i18n="feedbackBy">Previous video editing client</strong><small data-i18n="feedbackContext">Excerpt from client correspondence · Name withheld</small></span></figcaption></figure></div>
+    </section>
+    <section class="section section-dev" id="development"><div class="shell"><div class="section-head"><div><div class="section-kicker"><span>05</span><span data-i18n="devKicker">BEYOND THE TIMELINE</span></div><h2 data-i18n="devTitle">I also build<br>with code.</h2></div><p class="section-description" data-i18n="devDesc">Alongside editing, I work with full-stack development, backend systems and applied AI. This technical background informs how I approach workflows and automation.</p></div>
+      <div class="dev-grid">
+        <article class="dev-card"><div class="dev-image"><img src="./assets/images/dms-dashboard.png" loading="lazy" alt="DMS Platforms dashboard screenshot"></div><div class="dev-content"><div class="dev-tag">WEB APPLICATIONS</div><h3>DMS Platforms</h3><p data-i18n="dev1Desc">Document and data management systems with workflows, APIs and role-based access.</p></div></article>
+        <article class="dev-card"><div class="dev-image"><img src="./assets/images/ev-charging-dashboard.png" loading="lazy" alt="EV Charging Alerts dashboard screenshot"></div><div class="dev-content"><div class="dev-tag">SYSTEMS / MONITORING</div><h3>EV Charging Alerts</h3><p data-i18n="dev2Desc">Monitoring and alert features supporting electric-vehicle charging operations.</p></div></article>
+        <article class="dev-card"><div class="dev-image"><img src="./assets/images/alera-ai-dashboard.png" loading="lazy" alt="Alera AI application screenshot"></div><div class="dev-content"><div class="dev-tag">APPLIED AI</div><h3>ALERA AI</h3><p data-i18n="dev3Desc">Applied AI solutions, retrieval-augmented generation and data processing workflows.</p><a href="https://alera-ai.com/" rel="noopener noreferrer" target="_blank" class="small-link"><span data-i18n="viewProject">View project</span> ↗</a></div></article>
+      </div>
+      <div class="dev-footer"><div class="dev-skill-list"><span>JavaScript</span><span>Node.js</span><span>Python</span><span>PHP</span><span>Laravel</span><span>React / Vue</span><span>RAG</span><span>REST APIs</span></div><a class="underlined-link" href="https://github.com/tudev-2507" rel="noopener noreferrer" target="_blank"><span data-i18n="githubProjects">Explore my GitHub</span> ↗</a></div>
+    </div></section>
+    <section class="section section-contact" id="contact"><div class="shell contact-layout"><div><div class="section-kicker"><span>06</span><span data-i18n="contactKicker">LET'S CREATE SOMETHING</span></div><h2 data-i18n="contactTitle">Have a story<br>in mind?</h2><p data-i18n="contactDesc">I'm open to video editing collaborations, YouTube channel work and creative technology projects. Let's discuss your brief, references and timeline.</p></div><div class="contact-actions"><a class="contact-action" href="https://www.facebook.com/devtuw" target="_blank" rel="noopener noreferrer"><span>Facebook <small data-i18n="contactFB">Message me</small></span><span aria-hidden="true">↗</span></a><a class="contact-action" href="https://www.linkedin.com/in/%C4%91%C3%ACnh-t%C6%B0-v%C5%A9-561930369/" target="_blank" rel="noopener noreferrer"><span>LinkedIn <small data-i18n="contactLI">Connect professionally</small></span><span aria-hidden="true">↗</span></a><a class="contact-action" href="https://github.com/tudev-2507" target="_blank" rel="noopener noreferrer"><span>GitHub <small data-i18n="contactGH">Developer profile</small></span><span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><p>© <span id="year">2026</span> Vũ Đình Tư (Dev). <span data-i18n="footerRights">Made with intention.</span></p><p class="footer-language-note" data-i18n="footerLanguage">Language is selected by visitor country via GeoJS; you can always switch manually.</p><a href="#top" class="back-top"><span data-i18n="backTop">Back to top</span> ↑</a></div></footer>
+</body>
 </html>

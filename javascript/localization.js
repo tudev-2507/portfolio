@@ -7,7 +7,7 @@ const COPY = {
     'typed.1': 'A <span class="hero__frontend">Short-form</span> Editor',
     'typed.2': 'A <span class="hero__backend">Long-form</span> Editor',
     'typed.3': 'Also a <span class="hero__next">Developer</span>',
-    'hero.description': "I'm Dev, Vũ Đình Tư. I have 3 years of video editing experience. I started by editing short videos for a Korean company, then worked on YouTube content for US audiences. My connection with editing came naturally from an early interest in photography, which led me into art, Photoshop, and then Premiere Pro. Today I mainly edit with Premiere Pro and CapCut, and I use AI tools only when they are actually useful for the work.",
+    'hero.description': "I'm Dev. I have 3 years of video editing experience. I started by editing short videos for a Korean company, then worked on YouTube content for US audiences. My connection with editing came naturally from an early interest in photography, which led me into art, Photoshop, and then Premiere Pro. Today I mainly edit with Premiere Pro and CapCut, and I use AI tools only when they are actually useful for the work.",
     'hero.cta': 'View video work',
     'hero.tools': 'Premiere Pro <span>·</span> CapCut <span>·</span> Photoshop',
     'dev.focus': 'Focus', 'dev.focus.desc': 'Business systems and workflow automation', 'dev.visit.alera': 'Visit Alera AI',
@@ -53,7 +53,7 @@ const COPY = {
     'typed.1': '<span class="hero__frontend">ショート動画</span>編集',
     'typed.2': '<span class="hero__backend">長尺動画</span>編集',
     'typed.3': '<span class="hero__next">開発</span>もしています',
-    'hero.description': 'Devことヴー・ディン・トゥーです。動画編集歴は3年です。韓国企業向けのショート動画編集から始め、その後はアメリカ向けのYouTubeコンテンツ制作にも携わりました。編集に自然と惹かれたきっかけは、早い時期から写真が好きだったことです。そこからアートに興味を持ち、PhotoshopやPremiere Proを独学で学びました。現在はPremiere ProとCapCutを中心に使い、AIツールは本当に必要な場面だけで活用しています。',
+    'hero.description': 'Devです。動画編集歴は3年です。韓国企業向けのショート動画編集から始め、その後はアメリカ向けのYouTubeコンテンツ制作にも携わりました。編集に自然と惹かれたきっかけは、早い時期から写真が好きだったことです。そこからアートに興味を持ち、PhotoshopやPremiere Proを独学で学びました。現在はPremiere ProとCapCutを中心に使い、AIツールは本当に必要な場面だけで活用しています。',
     'hero.cta': '動画の制作実績を見る',
     'hero.tools': 'Premiere Pro <span>·</span> CapCut <span>·</span> Photoshop',
     'dev.focus': '担当分野', 'dev.focus.desc': '業務システムとワークフローの自動化', 'dev.visit.alera': 'ALERA AIを見る',
@@ -98,7 +98,7 @@ function apply(lang) {
   language = lang === 'ja' ? 'ja' : 'en';
   const phrases = COPY[language];
   document.documentElement.lang = language;
-  document.title = language === 'ja' ? 'ヴー・ディン・トゥー（Dev）｜動画編集・Web開発' : 'Vũ Đình Tư (Dev) | Video Editor & Developer';
+  document.title = language === 'ja' ? 'Dev｜動画編集・Web開発' : 'Dev | Video Editor & Developer';
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const value = phrases[el.dataset.i18n];
     if (value !== undefined) el.textContent = value;

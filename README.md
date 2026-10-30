@@ -1,16 +1,16 @@
-# Portfolio patch — preserve original style
+# Portfolio patch — preserve original style (v3)
 
 This patch updates the original portfolio while keeping the previous visual style.
 
 ## Included changes
 - Keep the old portfolio design/style.
-- Add a more practical Video Editor introduction.
-- Add story about photography, Photoshop, Premiere Pro, and Top 4 Chạm Việt Nam.
-- Embed 2 YouTube channel frames.
-- Embed 1 long-form YouTube sample video.
-- Embed 1 Facebook / Chạm Việt Nam video.
-- Show original Telegram feedback screenshots.
-- Use the provided portrait photo.
-- Keep developer projects, but remove BET.
-- Present Alera AI as a psychology AI project in a practical way.
-- Support EN/JP language switching with best-effort IP defaulting.
+- Remove the visible name “Vũ Đình Tư” and use “Dev”.
+- Reorder the 4 featured video frames:
+  1. Chạm Việt Nam video
+  2. Featured long-form YouTube sample
+  3. YouTube channel 01
+  4. YouTube channel 02
+- Keep the practical Video Editor introduction and photography story.
+- Keep the 2 Telegram feedback screenshots.
+- Keep Alera AI described as a practical psychology AI project.
+- Keep EN/JP language switching.
